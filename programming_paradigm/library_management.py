@@ -44,3 +44,8 @@ class Library:
         for book in self._books:
             if book.title == title and not book.is_available():
                 book.return
+
+ def list_available_books(self):  # ✅ Exactly as expected
+        for book in self._books:
+            if book.is_available():
+                print(book)
